@@ -35,11 +35,30 @@ export const Slider = () => {
                 : 'hidden'
             }
           >
-            <div>
+            <div className="relative">
               <picture>
                 <source media="(min-width: 768px)" srcSet={data.desktop} />
                 <img src={data.mobile} alt={data.title} className="w-full" />
               </picture>
+
+              <ul className="absolute -bottom-2 right-0 flex lgHide">
+                <li>
+                  <button
+                    onClick={previousSlide}
+                    className="bg-black hover:bg-neutral-700 transition-all duration-200"
+                  >
+                    <img src={left} alt="left" className="p-4" />
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={nextSlide}
+                    className="bg-black hover:bg-neutral-700 transition-all duration-200"
+                  >
+                    <img src={right} alt="right" className="p-4" />
+                  </button>
+                </li>
+              </ul>
             </div>
 
             <div className="p-8 lg:p-12 relative">
@@ -57,7 +76,7 @@ export const Slider = () => {
                 Show now <img src={arrow} alt="arrow" />
               </button>
 
-              <ul className="absolute -bottom-11 left-0 flex">
+              <ul className="absolute -bottom-11 left-0 flex smHide">
                 <li>
                   <button
                     onClick={previousSlide}

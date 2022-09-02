@@ -3,6 +3,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* @tailwind screens; */
+
 
 body {
   font-family: "League Spartan", sans-serif;
@@ -27,5 +29,21 @@ nav.open {
     position: relative;
     top: 0;
     left: 0;
+  }
+
+  .about img{
+    min-height: 22rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .lgHide{
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .smHide{
+    display: none;
   }
 }

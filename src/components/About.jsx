@@ -5,7 +5,7 @@ import aboutLight from '../assets/images/image-about-light.jpg';
 export const About = () => {
   return (
     <>
-      <section className="grid grid-cols-1 lg:grid-cols-3">
+      <section className="grid grid-cols-1 lg:grid-cols-3 about">
         <article>
           <img src={aboutDark} alt="aboutDark" className="w-full" />
         </article>
